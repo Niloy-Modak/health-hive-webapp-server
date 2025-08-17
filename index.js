@@ -93,7 +93,7 @@ async function run() {
       next();
     };
 
-    //----- Users data ------
+    //-----Part: 1 Users data API------
     //all users
     app.get("/users", verifyFBToken, verifyAdmin, async (req, res) => {
       try {
