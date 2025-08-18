@@ -249,7 +249,7 @@ async function run() {
       }
     );
 
-    //------------ Medicine API ------------------
+    //------------ Medicine API ----------------
     //add medicines
     app.post("/medicine/post", async (req, res) => {
       try {
