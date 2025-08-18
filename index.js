@@ -211,6 +211,18 @@ async function run() {
       }
     });
 
+    // Get all Users
+    app.get("/users/all", verifyFBToken, async (req, res) => {
+      try {
+        const users = await usersCollection
+          .find({ role: "user" })
+          .toArray();
+        res.send(users);
+      } catch (err) {
+        res.status(500).send({ error: "Failed to fetch users" });
+      }
+    });
+
     // GET single user by email
     app.get(
       "/users/:email",
@@ -502,7 +514,7 @@ async function run() {
       try {
         const discountedMedicines = await medicineCollection
           .find({ discount: { $gt: 0 } })
-          .sort({ _id: -1 }) 
+          .sort({ _id: -1 })
           .toArray();
 
         res.send(discountedMedicines);
