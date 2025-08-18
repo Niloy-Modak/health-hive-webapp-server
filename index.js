@@ -523,7 +523,7 @@ async function run() {
       }
     });
 
-    //-------- Orders and Payment ------------------------
+    //------------- Orders and Payment ----------------------
     //order medicine
     app.post("/order-medicine", async (req, res) => {
       const order = req.body;
