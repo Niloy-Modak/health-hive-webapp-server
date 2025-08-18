@@ -466,7 +466,7 @@ async function run() {
       }
     });
 
-    //------------- DELETE Medicines by Admin -------------
+    //-------------- DELETE Medicines by Admin --------------
     app.delete("/admin/medicine/delete/:id", async (req, res) => {
       try {
         const medicineId = req.params.id;
