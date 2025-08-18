@@ -416,7 +416,7 @@ async function run() {
       }
     });
 
-    //------------ Update Medicines by Admin -------------
+    //------------- Update Medicines by Admin --------------
     app.patch("/admin/medicine/update/:id", async (req, res) => {
       try {
         const medicineId = req.params.id;
